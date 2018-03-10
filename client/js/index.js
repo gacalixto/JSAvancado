@@ -3,8 +3,9 @@ var campos =[
 	document.querySelector("#quantidade"),
 	document.querySelector("#valor")
 ];
-
+var tbody = document.querySelector('table tbody');
 document.querySelector('.form').addEventListener('submit', function (event) {
+	event.preventDefault();
 	var tr = document.createElement('tr');
 	campos.forEach( function(campo) {
 		var td = document.createElement('td');
@@ -14,8 +15,12 @@ document.querySelector('.form').addEventListener('submit', function (event) {
 	});
 
 	var tdVolume = document.createElement('td');
-	tdVolume.textContent = campos[1].value*canpos[2].value;
+	tdVolume.textContent = campos[1].value*campos[2].value;
 
 	tr.appendChild(tdVolume);
-	/* body... */
+	tbody.appendChild(tr);
+	campos[0].value=' ';
+	campos[1].value='';
+	campos[2].value='';
+
 })
