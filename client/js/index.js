@@ -23,4 +23,4 @@ document.querySelector('.form').addEventListener('submit', function (event) {
 	campos[1].value='';
 	campos[2].value='';
 
-})
+});
