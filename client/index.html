@@ -53,13 +53,11 @@
     <script type="text/javascript" src="js/app/views/NegociacoesView.js"></script>
     <script type="text/javascript" src ="js/app/models/Mensagem.js"></script>
     <script type="text/javascript" src="js/app/views/MensagemView.js"></script>
+    <script type="text/javascript" src="js/app/services/ProxyFactory.js"></script>
+    <script type="text/javascript" src="js/app/helpers/Bind.js"></script>
 
     <script >
         let negociacaoController = new NegociacaoController();
-    </script>
-    <script>
-        let negociacao = new Proxy(new Negociacao(new Date(), 2, 100), {});
-
     </script>
 </body>
 </html>
